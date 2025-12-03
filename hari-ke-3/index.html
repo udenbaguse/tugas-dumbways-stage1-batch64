@@ -25,31 +25,56 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-<nav class="navbar bg-body-tertiary">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-    </a>
-  </div>
-</nav>
+  
 
-   <div class="d-flex justify-content-center align-items-center mt-5">
+  <body data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 shadow">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- Logo -->
+        <div class="pe-3">
+          <img src="img/logo.gif" alt="logo udenbaguse" width="50">
+        </div>
+      <!-- Menu -->
+      <ul class="navbar-nav d-flex flex-row gap-3 mb-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><b>Home</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><b>My Project</b></a>
+        </li>
+      </ul>
+
+      <!-- Contact Button -->
+      <a href="form.html" class="ms-auto">
+        <button type="button" class="btn btn-primary">Contact Me</button>
+      </a>
+
+    </div>
+  </nav>
+
+  <div class="d-flex justify-content-center align-items-center mt-5">
   <div class="card" style="width: 28rem;">
     <div class="d-flex">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 style="font-family: karla,sans-serif;" class="card-title">Lord Udenbaguse</h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card’s content.
+          Halo, saya adalah seorang calon <span style="font-family: karl;">Fullstack Developer</span> yang sedang
+          mempelajari berbagai teknologi web. Saya memiliki minat yang besar
         </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <button type="button" class="btn btn-outline-info me-3">Contact</button>
+        <a href="#" class="btn btn-outline-warning">Download <i class="fa-solid fa-download fa-fade" style="color: #dce1e5;"></i></a>
+        <br><br>
+      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-youtube"></i>
       </div>
-
       <img src="img/photo-profile.jpg" 
            alt="..." 
            class="img-fluid" 
-           style="width: 150px; object-fit: cover;">
+           style="width: 150px; object-fit: cover;"/>
     </div>
   </div>
 </div>
