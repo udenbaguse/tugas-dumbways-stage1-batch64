@@ -1,3 +1,5 @@
+//it's a function to create a project card element
+
 export function createProjectCard(project) {
   const card = document.createElement("div");
   card.className = "col-12 col-md-4 mb-4";

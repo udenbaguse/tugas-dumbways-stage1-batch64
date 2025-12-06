@@ -1,20 +1,20 @@
-// Mendapatkan ID proyek dari URL
+// get project ID dari URL
 const urlParams = new URLSearchParams(window.location.search);
 const projectId = parseInt(urlParams.get("id"));
 
-// Mendapatkan proyek dari local storage
+// get project from local storage
 let projects = JSON.parse(localStorage.getItem("projects")) || [];
 
-// Mencari proyek berdasarkan ID
+// find project by ID
 const project = projects.find((p) => p.id === projectId);
 
-// Validasi: proyek ditemukan?
+// handle case if project not found
 if (!project) {
   document.getElementById("projectTitle").textContent = "Project Not Found";
   throw new Error("Project not found!");
 }
 
-// Fungsi untuk memformat tanggal
+// format date function
 function formatDate(dateStr) {
   const d = new Date(dateStr);
   return d.toLocaleDateString("en-GB", {
@@ -24,7 +24,7 @@ function formatDate(dateStr) {
   });
 }
 
-// Fungsi untuk menghitung durasi
+// calculate duration function
 function calculateDuration(start, end) {
   const s = new Date(start);
   const e = new Date(end);
@@ -33,7 +33,7 @@ function calculateDuration(start, end) {
   return `${day} days`;
 }
 
-// Memasukkan data ke dokumen HTML
+// to html elements
 document.getElementById("projectTitle").textContent = project.name;
 document.getElementById("projectImage").src = project.image;
 document.getElementById("projectDate").textContent = `${formatDate(
@@ -45,7 +45,7 @@ document.getElementById("projectDuration").textContent = calculateDuration(
 );
 document.getElementById("projectDescription").textContent = project.description;
 
-// Merender Teknologi
+// render arr technologies
 document.getElementById("techList").innerHTML = project.technologies
   .map((t) => `<span class="badge text-bg-primary me-2">${t}</span>`)
   .join("");
