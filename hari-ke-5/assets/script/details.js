@@ -1,4 +1,4 @@
-// get project ID dari URL
+// get project ID from URL
 const urlParams = new URLSearchParams(window.location.search);
 const projectId = parseInt(urlParams.get("id"));
 

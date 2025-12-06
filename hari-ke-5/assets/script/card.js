@@ -5,7 +5,7 @@ export function createProjectCard(project) {
   card.className = "col-12 col-md-4 mb-4";
   card.innerHTML = `
     <div class="card bg-dark border-light" data-id="${project.id}">
-      <img src="${project.image}" class="card-img-top" style="height:200px; object-fit:cover;">
+      <img src="${project.image}" class="card-img-top" style="height:200px; object-fit:cover;" alt="Gambar Proyek">
       <div class="card-body text-light">
         <h5 class="card-title">${project.name}</h5>
         <p class="card-text small text-muted">
