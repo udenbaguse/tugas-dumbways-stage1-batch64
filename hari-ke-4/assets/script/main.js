@@ -148,8 +148,6 @@ submitBtn.addEventListener("click", () => {
   selectedImage = "";
 });
 
-// Initial render
-
 
 
 
